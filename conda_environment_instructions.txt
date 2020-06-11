@@ -1,0 +1,6 @@
+conda create --name geom_env_new
+conda activate geom_env_new
+conda install -c conda-forge cgal
+
+export LD_LIBRARY_PATH=/home/eboix/Dropbox/MOT/barycenters_code/coinbrew_folder/build/lib
+export COIN_INSTALL_DIR=/home/eboix/Dropbox/MOT/barycenters_code/coinbrew_folder/build
