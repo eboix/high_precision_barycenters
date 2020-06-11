@@ -77,5 +77,5 @@ cd ..
 
 ## License
 
-This project is licensed under the LGPL-3 license. S    ee the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the LGPL-3 license. See the [LICENSE.md](LICENSE.md) file for details.
 
