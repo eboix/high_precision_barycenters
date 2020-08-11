@@ -1,6 +1,6 @@
 # High-precision Wasserstein Barycenters
 
-This repository contains the code from [Altschuler, Boix-Adsera](TODO LINK) for exactly computing Wasserstein barycenters between discrete distributions.
+This repository contains the code from [Altschuler, Boix-Adsera](https://arxiv.org/abs/2006.08012) for exactly computing Wasserstein barycenters between discrete distributions.
 
 NB: Our focus in writing this code was clarity over speed. Much further optimization can certainly be done.
 
@@ -41,6 +41,7 @@ conda install -c conda-forge matplotlib
 conda install -c conda-forge pybind11
 conda install -c conda-forge scikit-learn
 conda install -c conda-forge opencv
+conda install -c conda-forge cvxopt
 ```
 
 Then build the modified_skgeom library. This is just the [skgeom library](https://github.com/scikit-geometry/scikit-geometry), which wraps CGAL into Python, plus an extra wrapper method that allows for faster construction of line segment arrangements. This installation step is slow. I have submitted a request to add this functionality to the main skgeom library, so hopefully in the future it will be possible to directly install the skgeom library and installation will be simpler and faster.
@@ -68,8 +69,6 @@ Requires:
 
 Compile the fast network simplex solver for pairwise OT that we use to compute the exact cost of a barycenter returned by IBP. This code is a slight modification of the code of [Dong, Gao, Peng, Razenshteyn, Sawlani](https://github.com/twistedcubic/fast_ot):
 ```
-conda install -c conda-forge cvxopt
-
 cd lemon_solver
 g++ -std=c++11 -O3 LemonNetworkSimplex.cpp -o LemonNetworkSimplex -lemon
 cd ..
