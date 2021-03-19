@@ -28,6 +28,7 @@ def get_tuples_to_check_from_power_diagram_intersections(supports, wts):
     wts = copy.deepcopy(wts)
     for i in range(k):
         wts[i] += -np.min(wts[i])
+        wts[i] = wts[i] * k # Rescale weights for convenience.
         for wt in wts[i]:
             assert(wt >= 0)
 
@@ -60,7 +61,7 @@ def get_tuples_to_check_from_power_diagram_intersections(supports, wts):
         # So W = R^2, W >= 0 always
         R = np.sqrt(np.asarray(W))
         Rs.append(R)
-        
+
         # Add virtual points to avoid infinite line segment corner cases.
         # These are far enough that they do not change the power diagram diagram within the bounding box,
         # and they also mean that all the infinite segments are irrelevant.
@@ -85,11 +86,10 @@ def get_tuples_to_check_from_power_diagram_intersections(supports, wts):
 
     corr_format_seg_list = [Segment2(Point2(seg[0][0], seg[0][1]), Point2(seg[1][0], seg[1][1])) for seg in tot_seg_list]
 
-    # FOR THIS, YOU NEED TO USE MY HACKED VERSION OF skgeom (see README) -- insertion of multiple segments at once is not yet
-    # supported in the basic skgeom library.
-    arr.insert_segments(corr_format_seg_list)
+    for seg in corr_format_seg_list:
+        arr.insert(seg)
 
-    
+
     # For each face of the intersection, find a point inside it.
     pts_to_check = []
     face_list = [f for f in arr.faces]
@@ -122,7 +122,7 @@ def get_tuples_to_check_from_power_diagram_intersections(supports, wts):
     # Use KD trees to extract the tuples from the faces of the diagram.
     # In principle, one could instead do this with a linear-time sweep through the arrangement data structure, but
     # in practice that takes a lot of time because the Python-C++ PyBind wrapper is not so fast.
-    
+
     # Construct the KD trees
     kdtrees = []
     for i in range(k):
@@ -160,3 +160,17 @@ def get_tuples_to_check_from_power_diagram_intersections(supports, wts):
     return tuples_to_check_set
 
 
+def get_tuple_cost_barycenter(supports, tup):
+    avgpoint = np.zeros(2)
+    k = len(tup)
+    for i in range(k):
+        avgpoint += supports[i][tup[i],0:2]
+    avgpoint = avgpoint / k
+
+    cst = 0
+    for i in range(k):
+        cst += (avgpoint[0] - supports[i][tup[i],0])**2
+        cst += (avgpoint[1] - supports[i][tup[i],1])**2
+    cst = cst / k
+
+    return cst

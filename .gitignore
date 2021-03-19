@@ -1,1 +1,5 @@
 *.egg
+lemon_solver/LemonNetworkSimplex
+__pycache__
+.DS_Store
+prob.lp
