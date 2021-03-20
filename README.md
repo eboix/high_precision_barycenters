@@ -18,7 +18,7 @@ git clone https://github.com/eboix/high_precision_barycenters.git
 ```
 conda install -c conda-forge matplotlib
 conda install -c conda-forge scikit-learn
-conda install -conda-forge scikit-geometry
+conda install -c conda-forge scikit-geometry
 ```
 
 3. Install [PuLP](https://github.com/coin-or/pulp):
