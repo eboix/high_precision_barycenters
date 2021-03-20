@@ -9,7 +9,7 @@ This folder contains code to reproduce Figure 3 from the paper [Altschuler, Boix
 After completing basic installation outlined in [README.md](../README.md), perform the following extended installation.
 1. Install MATLAB with the Image Processing Toolbox.
 
-2. Set the variable `matlab_path` in the `barycenter_methods_comparison.py` file to point to your installation of Matlab (e.g., `matlab_path = /Applications/MATLAB_R2020b.app/bin/matlab'`).
+2. Set the variable `matlab_path` in the `generate_figure_3.py` file to point to your installation of Matlab (e.g., `matlab_path = /Applications/MATLAB_R2020b.app/bin/matlab'`).
 
 3. Install [Lemon](https://lemon.cs.elte.hu/trac/lemon)
 
