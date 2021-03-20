@@ -9,7 +9,7 @@ sys.path.append('../')
 from barycenter_column_generation import BarycenterProblem
 from barycenter_utils import get_sparsedisc_test, get_sparsesquare_test, get_noisygrid_test, get_translatedgrid_test, show_sparse_data, exact_cost_lemon, get_dense_data_representation, save_dense_data_representation, save_sparse_data_representation, get_sparse_data_representation
 
-# Code to run tests of column_generation_for_barycenters against the IBP and MAAIPM methods with fixed support.
+# Code to run tests of our method against the fixed-support IBP and MAAIPM methods.
 
 def read_val_time_file(filename):
     f = open(filename, 'r')
