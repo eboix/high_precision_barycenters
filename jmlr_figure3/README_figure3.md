@@ -3,7 +3,7 @@
 
 This folder contains code to reproduce Figure 3 from the paper [Altschuler, Boix-Adsera JMLR 2021](https://jmlr.org/papers/v22/20-588.html). Figure 3 shows that our algorithm can compute exact barycenters at previously intractable sizes.
 
-![image]('paperfig3.png')
+![Figure 3](paperfig3.png)
 
 #### How to use
 After completing basic installation outlined in [README.md](../README.md), perform the following extended installation.
