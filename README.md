@@ -47,7 +47,7 @@ This final step may take some time.
 
 ## Reproducing comparisons
 
-Our JMLR paper has 2 comparisons against state-of-the-at methods:
+Our JMLR paper has 2 comparisons against state-of-the-art methods:
 
 - Figure 3 shows that our algorithm can compute exact barycenters at previously intractable sizes. To reproduce this, go to the folder `jmlr_figure3` and follow the instructions in [`jmlr_figure3/README_figure3.md`](jmlr_figure3/README_figure3.md)
 
