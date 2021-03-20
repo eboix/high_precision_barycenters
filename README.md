@@ -1,4 +1,4 @@
-# Computing (free-support) Wasserstein Barycenters exactly
+# Computing free-support Wasserstein Barycenters exactly
 
 This repository contains the code from [Altschuler, Boix-Adsera JMLR 2021](https://jmlr.org/papers/v22/20-588.html) for computing exact Wasserstein barycenters between discrete distributions.
 
