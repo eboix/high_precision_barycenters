@@ -50,8 +50,10 @@ This final step may take some time.
 Our JMLR paper has 2 comparisons against state-of-the-art methods:
 
 - Figure 3 shows that our algorithm can compute exact barycenters at previously intractable sizes. To reproduce this, go to the folder `jmlr_figure3` and follow the instructions in [`jmlr_figure3/README_figure3.md`](jmlr_figure3/README_figure3.md)
+![Figure 3](jmlr_figure3/paperfig3.png)
 
 - Figure 5 shows that the high-precision barycenters computed by our algorithm yield sharper visualizations. This is demonstrated on a standard benchmark dataset of images of concentric ellipses. The raw images to be averaged, barycenter images produced by state-of-the-art algorithms, and the barycenter image produced by our algorithm can be found in the folder `jmlr_figure5`. Follow the instructions in [`jmlr_figure5/README_figure5.md`](jmlr_figure5/README_figure5.md)
+![Figure 5](jmlr_figure5/paperfig5.png)
 
 
 ## License
