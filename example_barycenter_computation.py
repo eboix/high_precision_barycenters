@@ -7,8 +7,8 @@ from barycenter_column_generation import BarycenterProblem
 ## sparse_distributions is a list of k distributions. Each distribution is
 ## represented by a n x 3 numpy array, where each row [x, y, mu] represents a
 ## support point (x,y) along with its weight mu.
-sparse_distributions = get_sparsesquare_test(k=10,n=2)
-# show_sparse_data(sparse_distributions) # Draw the distributions
+sparse_distributions = get_sparsesquare_test(k=5,n=10)
+show_sparse_data(sparse_distributions) # Plot the k distributions
 
 ##########################################################################
 # B) Run our column generation method to obtain the Wasserstein barycenter.
@@ -24,4 +24,4 @@ used_tups=bary_prob.get_used_tuples()
 print('used_tups for barycenter:',used_tups)
 barysol = bary_prob.get_solved_barycenter()
 
-# show_sparse_data([barysol]) # Draw the barycenter solution
+show_sparse_data([barysol]) # Plot the barycenter solution
