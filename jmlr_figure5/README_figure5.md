@@ -2,6 +2,9 @@
 
 This folder contains code to reproduce Figure 5 from the paper [Altschuler, Boix-Adsera JMLR 2021](https://jmlr.org/papers/v22/20-588.html). Figure 5 shows that the high-precision barycenters computed by our algorithm yield sharper visualizations. This is demonstrated on a standard benchmark dataset of images of concentric ellipses. The raw images to be averaged, barycenter images produced by state-of-the-art algorithms, and the barycenter image produced by our algorithm can be found in this folder.
 
+![image](paperfig4.png)
+![image](paperfig5.png)
+
 #### How to use
 After completing basic installation outlined in [README.md](../README.md), run `generate_figure_5.py` with Python:
 1. Draws the input data and barycenters computed by different methods to the `outputfigs` folder.
