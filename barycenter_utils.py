@@ -298,7 +298,7 @@ def exact_cost_lemon(sparse_datum1, sparse_datum2, lemon_solver_location='./lemo
     print('Looking here for the Lemon solver: ', lemon_solver_location)
 
     if not os.path.isfile(lemon_solver_location):
-        assert 0, 'ERROR: Cannot find LemonNetworkSimplex executable. Please compile it (see either jmlr_figure3/README_figure3.md or jmlr_figure5/README_figure5.md).'
+        assert 0, 'ERROR: Cannot find LemonNetworkSimplex executable. Please compile it (see either jmlr_figure3/README.md or jmlr_figure5/README.md for instructions).'
     print('Lemon solver found!')
 
     f = open('curr_cost_problem', 'w')
