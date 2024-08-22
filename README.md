@@ -2,7 +2,11 @@
 
 This repository contains the code from [Altschuler, Boix-Adsera JMLR 2021](https://jmlr.org/papers/v22/20-588.html) for computing exact Wasserstein barycenters between discrete distributions.
 
-NB: Our focus in writing this code was clarity over speed. Much further optimization can certainly be done. Furthermore, for simplicity we have only implemented our algorithm for 2-dimensional distributions (e.g., images).
+⚠️ **WARNING: This is academic code** ⚠️
+* Our focus in writing this code was clarity over speed, and we believe that further optimization can be done. This means that our implementation can be quite slow. (On medium-size inputs, our program can be ~1000 times slower, if not more, compared to **approximate** barycenter solvers.)
+* However, our implementation still returns an **exact** barycenter much faster than previous "brute-force" methods, and scales to much larger problem sizes than previously possible.
+* We believe that it is an interesting research direction to create practical, **exact** barycenter solver implementations that compete in runtime with **approximate** solvers and are practical to use on medium-size and large-size inputs.
+* We have only implemented our algorithm for 2-dimensional distributions (e.g., images), because this allows us to use existing geometry packages.
 
 ## Installation
 
